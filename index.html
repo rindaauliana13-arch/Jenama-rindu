@@ -1,182 +1,455 @@
- <script src="script.js"></script>
-</body>
-</html>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gantungan Handuk Plat Tebal Premium 40 cm dari Jenama Rindu. Kokoh, elegan, dan tersedia 1 hingga 4 susun.">
-  <title>Jenama Rindu | Gantungan Handuk Premium 40 cm</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JENAMA RINDU | Gantungan Handuk Premium</title>
+<meta name="description" content="Gantungan Handuk Plat Tebal Premium JENAMA RINDU. Pilihan ukuran dan model untuk rumah Anda.">
+<style>
+:root {
+  --navy:#17263D;
+  --navy-dark:#101B2D;
+  --navy-light:#304763;
+  --gold:#C5A46D;
+  --gold-light:#E7D5B3;
+  --ivory:#F7F4ED;
+  --white:#FFFFFF;
+  --text:#343A40;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--ivory);
+  color:var(--text);
+  line-height:1.6;
+}
+a {text-decoration:none;color:inherit}
+img {max-width:100%;display:block}
+.container {width:min(1120px,92%);margin:auto}
+header {
+  background:var(--navy-dark);
+  color:white;
+  border-bottom:2px solid var(--gold);
+}
+.nav {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  padding:12px 0;
+}
+.brand {display:flex;align-items:center;gap:12px}
+.brand img {
+  width:52px;height:52px;object-fit:contain;
+  border-radius:50%;background:white;
+}
+.brand-name {font-size:19px;font-weight:bold;letter-spacing:2px}
+.brand-tagline {font-size:10px;color:var(--gold-light);letter-spacing:2px}
+.nav-links {display:flex;gap:20px;flex-wrap:wrap;font-size:13px}
+.nav-links a:hover {color:var(--gold-light)}
+.hero {
+  background:linear-gradient(120deg,var(--navy-dark),var(--navy-light));
+  color:white;padding:76px 0;
+}
+.hero-grid {
+  display:grid;grid-template-columns:1.1fr .9fr;
+  gap:42px;align-items:center;
+}
+.eyebrow {
+  color:var(--gold-light);letter-spacing:3px;
+  font-size:12px;font-weight:bold;margin-bottom:15px;
+}
+.hero h1 {
+  font-family:Georgia,serif;font-size:clamp(34px,5vw,58px);
+  line-height:1.13;margin-bottom:20px;
+}
+.hero h1 span {color:var(--gold-light)}
+.hero p {color:#E5E9EF;max-width:520px;margin-bottom:27px}
+.btn {
+  display:inline-block;background:var(--gold);
+  color:var(--navy-dark);padding:13px 23px;
+  border-radius:4px;font-weight:bold;
+}
+.btn:hover {background:var(--gold-light)}
+.hero-image {
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(231,213,179,.5);
+  padding:12px;border-radius:10px;
+}
+.hero-image img {
+  width:100%;height:350px;object-fit:contain;
+  background:white;border-radius:5px;
+}
+.section {padding:66px 0}
+.section-heading {text-align:center;margin-bottom:35px}
+.section-heading small {
+  color:#9A7948;font-weight:bold;letter-spacing:3px;
+}
+.section-heading h2 {
+  color:var(--navy);font-family:Georgia,serif;
+  font-size:clamp(27px,4vw,38px);margin:8px 0;
+}
+.section-heading p {color:#707780}
+.benefits {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.benefit {
+  background:white;padding:25px 20px;text-align:center;
+  border:1px solid #E8E0D2;border-radius:7px;
+}
+.benefit .symbol {font-size:28px;color:var(--gold)}
+.benefit h3 {color:var(--navy);margin:8px 0}
+.benefit p {font-size:13px;color:#707780}
+.poster-wrap {
+  background:var(--navy);padding:18px;border-radius:8px;
+}
+.poster-wrap img {
+  width:100%;max-height:520px;object-fit:contain;
+  background:white;border-radius:4px;
+}
+.gallery {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.gallery-card {
+  background:white;border:1px solid #E8E0D2;
+  border-radius:8px;overflow:hidden;
+}
+.gallery-card img {
+  width:100%;height:250px;object-fit:contain;
+  background:#fff;padding:12px;
+}
+.gallery-card h3 {
+  color:var(--navy);text-align:center;
+  padding:14px;border-top:1px solid #eee;
+}
+@media(max-width:760px) {
+  .hero {padding:48px 0}
+  .hero-grid {grid-template-columns:1fr;gap:28px}
+  .hero-image img {height:280px}
+  .benefits {grid-template-columns:1fr}
+  .gallery {grid-template-columns:1fr 1fr}
+  .nav {justify-content:center}
+  .nav-links {justify-content:center}
+}
+@media(max-width:430px) {
+  .gallery {grid-template-columns:1fr}
+  .brand-name {font-size:16px}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#beranda" aria-label="Jenama Rindu - Beranda">
-      <span class="brand-mark">JR</span>
-      <span><strong>JENAMA RINDU</strong><small>HOME ESSENTIALS</small></span>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="logo-jenama-rindu.jpg" alt="Logo JENAMA RINDU">
+      <div>
+        <div class="brand-name">JENAMA RINDU</div>
+        <div class="brand-tagline">QUALITY • STYLE • TRUST</div>
+      </div>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-    <nav class="main-nav" id="mainNav">
+    <nav class="nav-links">
       <a href="#beranda">Beranda</a>
-      <a href="#katalog">Katalog</a>
-      <a href="#spesifikasi">Spesifikasi</a>
-      <a href="#tentang">Tentang Kami</a>
-      <a class="nav-cta" href="#kontak">Pesan Sekarang</a>
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#produk">Produk</a>
+      <a href="#harga">Daftar Harga</a>
+      <a href="#pesan">Pemesanan</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <!-- HALAMAN 1: BERANDA -->
-    <section class="hero section" id="beranda">
-      <div class="hero-copy">
-        <p class="eyebrow">RAPI • ELEGAN • TAHAN LAMA</p>
-        <h1>Gantungan Handuk <em>Plat Tebal</em> Premium 40 cm</h1>
-        <p class="hero-lead">Elegan, kokoh, &amp; anti karat untuk kamar mandi modern.</p>
-        <p class="muted">Nikmati kerapian maksimal dengan gantungan handuk berbahan besi plat solid buatan Jenama Rindu. Dirancang presisi dengan panjang 40 cm, tahan beban berat, dan tersedia pilihan 1 hingga 4 susun.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#katalog">Buka Katalog Produk <span>↗</span></a>
-          <a class="button button-outline" href="#spesifikasi">Lihat Spesifikasi Lengkap</a>
+<main>
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">KUALITAS UNTUK KENYAMANAN RUMAH</div>
+      <h1>Sentuhan Elegan untuk <span>Setiap Ruang</span></h1>
+      <p>
+        Hadirkan kerapian dan kenyamanan dengan
+        Gantungan Handuk Plat Tebal Premium dari
+        JENAMA RINDU. Tersedia pilihan model dan ukuran
+        sesuai kebutuhan rumah Anda.
+      </p>
+      <a class="btn" href="#produk">LIHAT PRODUK</a>
+    </div>
+    <div class="hero-image">
+      <img src="produk-1-baris.jpg" alt="Gantungan handuk JENAMA RINDU">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="keunggulan">
+  <div class="container">
+    <div class="section-heading">
+      <small>JENAMA RINDU</small>
+      <h2>Keunggulan Produk</h2>
+      <p>Desain fungsional dengan tampilan yang elegan.</p>
+    </div>
+    <div class="benefits">
+      <article class="benefit">
+        <div class="symbol">◆</div>
+        <h3>Tampilan Elegan</h3>
+        <p>Desain sederhana yang cocok melengkapi ruang kamar mandi.</p>
+      </article>
+      <article class="benefit">
+        <div class="symbol">✦</div>
+        <h3>Pilihan Variasi</h3>
+        <p>Tersedia pilihan 1, 2, dan 3 baris dengan beberapa ukuran.</p>
+      </article>
+      <article class="benefit">
+        <div class="symbol">◇</div>
+        <h3>Praktis dan Fungsional</h3>
+        <p>Membantu menjaga handuk tetap tertata dan mudah dijangkau.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff">
+  <div class="container">
+    <div class="section-heading">
+      <small>INFORMASI PRODUK</small>
+      <h2>Kenali JENAMA RINDU</h2>
+      <p>Produk pilihan untuk melengkapi kebutuhan rumah Anda.</p>
+    </div>
+    <div class="poster-wrap">
+      <img src="poster-jenama-rindu.jpg" alt="Poster produk JENAMA RINDU">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="produk">
+  <div class="container">
+    <div class="section-heading">
+      <small>KOLEKSI PRODUK</small>
+      <h2>Pilihan Model Produk</h2>
+      <p>Pilih model yang sesuai dengan kebutuhan Anda.</p>
+    </div>
+    <div class="gallery">
+      <article class="gallery-card">
+        <img src="produk-1-baris.jpg" alt="Gantungan handuk 1 baris">
+        <h3>Model 1 Baris</h3>
+      </article>
+      <article class="gallery-card">
+        <img src="produk-2-baris.jpg" alt="Gantungan handuk 2 baris">
+        <h3>Model 2 Baris</h3>
+      </article>
+      <article class="gallery-card">
+        <img src="produk-3-baris.jpg" alt="Gantungan handuk 3 baris">
+        <h3>Model 3 Baris</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="harga" style="background:#fff">
+  <div class="container">
+    <div class="section-heading">
+      <small>DAFTAR HARGA RESMI</small>
+      <h2>Pilih Ukuran Produk</h2>
+      <p>Harga dalam Rupiah. Silakan pilih model dan ukuran yang diinginkan.</p>
+    </div>
+
+    <div id="price-list" class="gallery"></div>
+  </div>
+</section>
+
+<section class="section" id="pesan">
+  <div class="container">
+    <div class="section-heading">
+      <small>PEMESANAN</small>
+      <h2>Pesan Produk Anda</h2>
+      <p>Isi detail pesanan. Total harga akan dihitung otomatis.</p>
+    </div>
+
+    <div style="max-width:650px;margin:auto;background:white;padding:26px;border:1px solid #E8E0D2;border-radius:8px">
+      <form id="order-form">
+        <label for="customer" style="display:block;font-weight:bold;color:#17263D;margin-bottom:6px">Nama Pemesan</label>
+        <input id="customer" type="text" placeholder="Masukkan nama Anda" required
+          style="width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px">
+
+        <label for="phone" style="display:block;font-weight:bold;color:#17263D;margin-bottom:6px">Nomor WhatsApp</label>
+        <input id="phone" type="tel" placeholder="Contoh: 081234567890" required
+          style="width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px">
+
+        <label for="product-choice" style="display:block;font-weight:bold;color:#17263D;margin-bottom:6px">Pilih Produk</label>
+        <select id="product-choice" required
+          style="width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px">
+          <option value="">Pilih model dan ukuran</option>
+        </select>
+
+        <label for="quantity" style="display:block;font-weight:bold;color:#17263D;margin-bottom:6px">Jumlah Pesanan</label>
+        <input id="quantity" type="number" min="1" value="1" required
+          style="width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px">
+
+        <label for="address" style="display:block;font-weight:bold;color:#17263D;margin-bottom:6px">Alamat Pengiriman</label>
+        <textarea id="address" rows="3" placeholder="Masukkan alamat lengkap"
+          style="width:100%;padding:13px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px"></textarea>
+
+        <div style="background:#F7F4ED;padding:18px;border-radius:5px;margin-bottom:20px">
+          <div style="color:#555">Total Pesanan</div>
+          <div id="total-price" style="font-size:26px;font-weight:bold;color:#17263D">Rp0</div>
         </div>
-        <div class="hero-note"><span class="note-dot"></span> Pilihan 1–4 susun · Panjang 40 cm</div>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-frame">
-          <div class="visual-topline"><span>JENAMA RINDU</span><span>01 / 05</span></div>
-          <div class="rack-art" aria-label="Ilustrasi gantungan handuk empat susun">
-            <div class="rack-rail rail-one"></div><div class="rack-rail rail-two"></div>
-            <div class="rack-rail rail-three"></div><div class="rack-rail rail-four"></div>
-            <div class="rack-side side-left"></div><div class="rack-side side-right"></div>
-            <div class="rack-mount mount-left"></div><div class="rack-mount mount-right"></div>
-          </div>
-          <div class="visual-caption"><strong>40 cm</strong><span>HEAVY DUTY IRON PLATE</span></div>
-        </div>
-        <div class="hero-stamp">BUILT<br>TO LAST</div>
-      </div>
-    </section>
 
-    <section class="benefits section section-soft">
-      <div class="section-heading">
-        <p class="eyebrow">KENAPA JENAMA RINDU?</p>
-        <h2>Detail kecil, dampak besar<br><em>untuk kerapian rumah.</em></h2>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit-card"><span class="card-number">01</span><div class="benefit-icon">▰</div><h3>Plat Besi Solid Heavy Duty</h3><p>Konstruksi ekstra kokoh dan dirancang agar tidak mudah melengkung saat menopang beberapa handuk basah.</p></article>
-        <article class="benefit-card"><span class="card-number">02</span><div class="benefit-icon">↔</div><h3>Panjang Presisi 40 cm</h3><p>Ukuran ideal untuk membentangkan handuk mandi standar agar cepat kering tanpa memakan banyak ruang.</p></article>
-        <article class="benefit-card"><span class="card-number">03</span><div class="benefit-icon">✧</div><h3>Proteksi Powder Coating</h3><p>Lapisan pelindung yang membantu menjaga permukaan dari kelembapan dan korosi. Jaga tetap kering setelah dibersihkan.</p></article>
-        <article class="benefit-card"><span class="card-number">04</span><div class="benefit-icon">▤</div><h3>Fleksibel 1–4 Susun</h3><p>Pilih jumlah baris gantungan sesuai kebutuhan kapasitas anggota keluarga dan ruang yang tersedia.</p></article>
-      </div>
-    </section>
-
-    <!-- HALAMAN 2: KATALOG -->
-    <section class="section catalog-section" id="katalog">
-      <div class="section-heading centered">
-        <p class="eyebrow">PILIH SESUAI KEBUTUHAN</p>
-        <h2>Katalog Gantungan Handuk<br><em>Plat Tebal 40 cm</em></h2>
-        <p class="muted">Semua varian dibuat dari material plat tebal berkualitas tinggi.</p>
-      </div>
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-art art-one"><span class="product-tag">01 SUSUN</span><div class="mini-rack"><i></i></div></div>
-          <div class="product-info"><p class="product-type">SINGLE BAR</p><h3>1 Susun</h3><p class="spec-line">40 cm · Plat tebal solid · Anti karat</p><p class="product-use">Untuk kamar mandi minimalis, kamar tamu, atau area wastafel.</p><div class="product-bottom"><strong>Rp 35.000</strong><button class="text-button order-variant" data-variant="1 Susun">Pesan varian ↗</button></div></div>
-        </article>
-        <article class="product-card">
-          <div class="product-art art-two"><span class="product-tag">02 SUSUN</span><div class="mini-rack"><i></i><i></i></div></div>
-          <div class="product-info"><p class="product-type">DOUBLE BAR</p><h3>2 Susun</h3><p class="spec-line">40 cm · Plat tebal solid · Anti karat</p><p class="product-use">Pilihan praktis untuk penggunaan pribadi atau pasangan.</p><div class="product-bottom"><strong>Rp 55.000</strong><button class="text-button order-variant" data-variant="2 Susun">Pesan varian ↗</button></div></div>
-        </article>
-        <article class="product-card featured">
-          <div class="product-art art-three"><span class="product-tag">03 SUSUN</span><div class="mini-rack"><i></i><i></i><i></i></div></div>
-          <div class="product-info"><p class="product-type">TRIPLE BAR</p><h3>3 Susun</h3><p class="spec-line">40 cm · Plat tebal solid · Anti karat</p><p class="product-use">Kapasitas lebih lega untuk kebutuhan keluarga kecil.</p><div class="product-bottom"><strong>Rp 75.000</strong><button class="text-button order-variant" data-variant="3 Susun">Pesan varian ↗</button></div></div>
-        </article>
-        <article class="product-card">
-          <div class="product-art art-four"><span class="product-tag">04 SUSUN</span><div class="mini-rack"><i></i><i></i><i></i><i></i></div></div>
-          <div class="product-info"><p class="product-type">FOUR BAR</p><h3>4 Susun</h3><p class="spec-line">40 cm · Plat tebal solid · Anti karat</p><p class="product-use">Kapasitas maksimal untuk kebutuhan keluarga besar.</p><div class="product-bottom"><strong>Rp 95.000</strong><button class="text-button order-variant" data-variant="4 Susun">Pesan varian ↗</button></div></div>
-        </article>
-      </div>
-      <p class="price-note">Harga tercantum per unit dan belum termasuk ongkos kirim. Konfirmasi stok serta biaya pengiriman kepada admin.</p>
-    </section>
-
-    <!-- HALAMAN 3: DETAIL PRODUK -->
-    <section class="section details-section section-soft" id="spesifikasi">
-      <div class="details-intro">
-        <p class="eyebrow">DIBUAT UNTUK DIGUNAKAN SETIAP HARI</p>
-        <h2>Spesifikasi Detail &amp;<br><em>Panduan Pemasangan</em></h2>
-        <p class="muted">Fungsional, sederhana, dan menyatu dengan tampilan kamar mandi modern.</p>
-        <div class="detail-highlight"><strong>40<span>cm</span></strong><small>PANJANG BATANG</small></div>
-      </div>
-      <div class="spec-panel">
-        <h3>Informasi Material &amp; Ukuran</h3>
-        <dl class="spec-list">
-          <div><dt>Panjang batang</dt><dd>40 cm — pas untuk bentangan handuk mandi dewasa</dd></div>
-          <div><dt>Bahan utama</dt><dd>Plat besi solid (Heavy Duty Iron Plate)</dd></div>
-          <div><dt>Ketebalan</dt><dd>Plat tebal khusus penopang beban</dd></div>
-          <div><dt>Finishing</dt><dd>Industrial Powder Coating</dd></div>
-          <div><dt>Daya beban maksimal</dt><dd>Hingga 15 kg*</dd></div>
-          <div><dt>Isi dalam paket</dt><dd>1 set gantungan + skrup &amp; fisher dinding</dd></div>
-        </dl>
-        <p class="fine-print">*Kapasitas beban merupakan informasi spesifikasi produk yang perlu dipastikan kembali sesuai kondisi dinding, jenis fisher, dan cara pemasangan.</p>
-      </div>
-      <div class="installation">
-        <div><p class="eyebrow">PANDUAN PRAKTIS</p><h3>Pemasangan mudah<br>dalam 4 langkah.</h3></div>
-        <ol class="steps">
-          <li><span>01</span><p>Tentukan posisi ketinggian gantungan pada dinding kamar mandi Anda.</p></li>
-          <li><span>02</span><p>Tandai posisi lubang skrup menggunakan pensil melalui plat penopang.</p></li>
-          <li><span>03</span><p>Buat lubang pada dinding menggunakan bor dan masukkan fisher yang disediakan.</p></li>
-          <li><span>04</span><p>Posisikan gantungan dan kencangkan skrup menggunakan obeng hingga kuat.</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- HALAMAN 4: TENTANG KAMI -->
-    <section class="section about-section" id="tentang">
-      <div class="about-visual"><div class="about-monogram">JR</div><p>RAPI DALAM FUNGSI.<br>HANGAT DALAM RUMAH.</p><span>JENAMA RINDU · EST. BRAND</span></div>
-      <div class="about-copy">
-        <p class="eyebrow">CERITA DI BALIK JENAMA</p>
-        <h2>Tentang <em>Jenama Rindu</em></h2>
-        <p>Jenama Rindu adalah brand penyedia perabot dan perlengkapan rumah tangga berkualitas tinggi yang berfokus pada olahan material besi. Kami hadir untuk membantu pemilik rumah mewujudkan hunian yang rapi, bersih, estetik, dan terorganisir.</p>
-        <div class="values">
-          <article><span>01</span><div><h3>Kualitas Bahan Terjamin</h3><p>Setiap lembar besi disortir secara presisi untuk memastikan ketebalan dan ketahanan material.</p></div></article>
-          <article><span>02</span><div><h3>Pengrajin Berpengalaman</h3><p>Pengerjaan terampil demi menghasilkan sudut, sambungan, dan tekstur finishing yang rapi.</p></div></article>
-          <article><span>03</span><div><h3>Kemasan Aman</h3><p>Pengiriman dilengkapi lapisan pelindung ekstra agar barang tiba dalam kondisi baik.</p></div></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- HALAMAN 5: KONTAK & PEMESANAN -->
-    <section class="contact-section section" id="kontak">
-      <div class="contact-heading">
-        <p class="eyebrow">KAMI SIAP MEMBANTU</p>
-        <h2>Hubungi Kami &amp;<br><em>Pemesanan Direct</em></h2>
-        <p class="muted">Isi detail pesanan Anda. Pesan akan disiapkan dan dibuka melalui WhatsApp.</p>
-        <div class="contact-details">
-          <div><span class="contact-icon">✆</span><p><small>WHATSAPP ADMIN</small><strong>+62 812-3456-7890</strong><small>Jam operasional 08.00–20.00 WIB</small></p></div>
-          <div><span class="contact-icon">⌖</span><p><small>LOKASI WORKSHOP &amp; GUDANG</small><strong>Bandung, Jawa Barat</strong><small>Indonesia</small></p></div>
-        </div>
-      </div>
-      <form class="order-form" id="orderForm">
-        <h3>Formulir Pemesanan</h3>
-        <label for="customerName">Nama pemesan</label><input id="customerName" name="name" type="text" placeholder="Nama lengkap Anda" required>
-        <div class="form-row">
-          <div><label for="variant">Varian produk</label><select id="variant" name="variant" required><option value="">Pilih varian</option><option>1 Susun — Rp 35.000</option><option>2 Susun — Rp 55.000</option><option>3 Susun — Rp 75.000</option><option>4 Susun — Rp 95.000</option></select></div>
-          <div><label for="quantity">Jumlah (pcs)</label><input id="quantity" name="quantity" type="number" min="1" value="1" required></div>
-        </div>
-        <label for="address">Alamat pengiriman</label><textarea id="address" name="address" rows="3" placeholder="Alamat lengkap, kecamatan, dan kota" required></textarea>
-        <label for="notes">Catatan khusus (opsional)</label><textarea id="notes" name="notes" rows="2" placeholder="Warna, pertanyaan, atau catatan lainnya"></textarea>
-        <button class="button button-dark submit-button" type="submit">Kirim Pesanan via WhatsApp <span>↗</span></button>
-        <p class="form-disclaimer">Mohon bantuannya untuk penghitungan ongkos kirim dan total pembayaran. Admin akan membantu konfirmasi pesanan.</p>
+        <button type="submit" class="btn" style="border:0;width:100%;cursor:pointer;font-size:15px">
+          PESAN MELALUI WHATSAPP
+        </button>
       </form>
-    </section>
-  </main>
+    </div>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <a class="brand brand-footer" href="#beranda"><span class="brand-mark">JR</span><span><strong>JENAMA RINDU</strong><small>HOME ESSENTIALS</small></span></a>
-    <p>Ruang rapi, hati lebih berarti.</p>
-    <span>© <span id="year"></span> Jenama Rindu. All rights reserved.</span>
-  </footer>
-  <a class="floating-wa" id="floatingWa" href="#" aria-label="Hubungi admin melalui WhatsApp">WA</a>
-  <script src="script.js"></script>
+<section class="section" style="background:#17263D;color:white">
+  <div class="container" style="text-align:center">
+    <div class="eyebrow">TENTANG KAMI</div>
+    <h2 style="font-family:Georgia,serif;font-size:32px;margin-bottom:12px">JENAMA RINDU</h2>
+    <p style="max-width:650px;margin:auto;color:#E5E9EF">
+      Terima kasih telah mengenal JENAMA RINDU.
+      Kami menghadirkan pilihan gantungan handuk dengan
+      variasi model dan ukuran untuk melengkapi kebutuhan rumah Anda.
+    </p>
+  </div>
+</section>
+
+<footer style="background:#101B2D;color:#ddd;text-align:center;padding:22px 12px;font-size:13px">
+  <p>© <span id="year"></span> JENAMA RINDU. Hak cipta dilindungi.</p>
+  <p style="color:#C5A46D">Quality • Style • Trust</p>
+</footer>
+
+
+<script>
+const products = [
+  {name:"1 Baris - 60 cm", price:41500},
+  {name:"1 Baris - 80 cm", price:48500},
+  {name:"1 Baris - 100 cm", price:55000},
+  {name:"1 Baris - 120 cm", price:64500},
+
+  {name:"2 Baris - 60 cm", price:51500},
+  {name:"2 Baris - 80 cm", price:65500},
+  {name:"2 Baris - 100 cm", price:75000},
+  {name:"2 Baris - 120 cm", price:78500},
+
+  {name:"3 Baris - 60 cm", price:62000},
+  {name:"3 Baris - 80 cm", price:78500},
+  {name:"3 Baris - 100 cm", price:88500},
+  {name:"3 Baris - 120 cm", price:97000}
+];
+
+// GANTI NOMOR DI BAWAH DENGAN NOMOR WHATSAPP ADMIN.
+// Gunakan kode negara 62, tanpa tanda + dan tanpa angka 0 di depan.
+const NOMOR_ADMIN = "GANTI_DENGAN_NOMOR_ADMIN";
+
+const rupiah = angka =>
+  new Intl.NumberFormat("id-ID", {
+    style:"currency",
+    currency:"IDR",
+    maximumFractionDigits:0
+  }).format(angka);
+
+const priceList = document.getElementById("price-list");
+const productChoice = document.getElementById("product-choice");
+const quantity = document.getElementById("quantity");
+const totalPrice = document.getElementById("total-price");
+
+products.forEach((product, index) => {
+  const card = document.createElement("article");
+  card.className = "gallery-card";
+  card.style.padding = "20px";
+  card.innerHTML = `
+    <div style="color:#9A7948;font-size:12px;font-weight:bold">
+      JENAMA RINDU PREMIUM
+    </div>
+    <h3 style="border:0;text-align:left;padding:10px 0;color:#17263D">
+      ${product.name}
+    </h3>
+    <div style="font-size:23px;font-weight:bold;color:#17263D">
+      ${rupiah(product.price)}
+    </div>
+    <div style="font-size:12px;color:#777;margin-top:8px">
+      Harga per produk
+    </div>
+  `;
+  priceList.appendChild(card);
+
+  const option = document.createElement("option");
+  option.value = index;
+  option.textContent = `${product.name} — ${rupiah(product.price)}`;
+  productChoice.appendChild(option);
+});
+
+function hitungTotal() {
+  const index = productChoice.value;
+  const jumlah = Math.max(1, Number(quantity.value) || 1);
+
+  if (index === "") {
+    totalPrice.textContent = rupiah(0);
+    return 0;
+  }
+
+  const total = products[Number(index)].price * jumlah;
+  totalPrice.textContent = rupiah(total);
+  return total;
+}
+
+productChoice.addEventListener("change", hitungTotal);
+quantity.addEventListener("input", hitungTotal);
+
+document.getElementById("order-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nama = document.getElementById("customer").value.trim();
+  const telepon = document.getElementById("phone").value.trim();
+  const alamat = document.getElementById("address").value.trim();
+  const index = productChoice.value;
+  const jumlah = Math.max(1, Number(quantity.value) || 1);
+
+  if (!nama || !telepon || index === "") {
+    alert("Mohon lengkapi nama, nomor WhatsApp, dan pilihan produk.");
+    return;
+  }
+
+ const NOMOR_ADMIN = "6285848109411";
+  if (!/^\d{9,15}$/.test(NOMOR_ADMIN)) {
+    alert("Nomor WhatsApp admin belum diatur. Silakan hubungi admin secara langsung.");
+    return;
+  }
+
+  const produk = products[Number(index)];
+  const total = produk.price * jumlah;
+
+  const pesan =
+`Halo JENAMA RINDU, saya ingin memesan produk.
+
+Nama: ${nama}
+Nomor WhatsApp: ${telepon}
+Produk: ${produk.name}
+Harga satuan: ${rupiah(produk.price)}
+Jumlah: ${jumlah}
+Total: ${rupiah(total)}
+Alamat: ${alamat || "Belum diisi"}
+
+Mohon informasi selanjutnya. Terima kasih.`;
+
+  const url = "https://wa.me/" + NOMOR_ADMIN +
+    "?text=" + encodeURIComponent(pesan);
+
+  window.open(url, "_blank");
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+hitungTotal();
+</script>
+</body>
+</html>
+
+
+</main>
 </body>
 </html>
